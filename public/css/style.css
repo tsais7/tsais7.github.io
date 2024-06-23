@@ -14,20 +14,7 @@
   --code-color: #6a5d4d;
   --border-color: #d3c1ad;
   --sidebar-bg: #cb997e;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #4a4a4a;
-    --text-color: #ffe8d6;
-    --heading-color: #ddbea9;
-    --link-color: #b7b7a4;
-    --accent-color: #cb997e;
-    --code-bg: #3a3a3a;
-    --code-color: #e0d3c1;
-    --border-color: #6a5d4d;
-    --sidebar-bg: #6a5d4d;
-  }
+  --highlight-color: #a5a58d;
 }
 
 html,
@@ -93,6 +80,7 @@ html {
     font-size: 16px;
   }
 }
+
 @media (min-width: 58em) {
   html {
     font-size: 20px;
@@ -118,17 +106,21 @@ h6 {
   color: var(--heading-color);
   text-rendering: geometricPrecision;
 }
+
 h1 {
   font-size: 2rem;
 }
+
 h2 {
   margin-top: 1rem;
   font-size: 1.5rem;
 }
+
 h3 {
   margin-top: 1.5rem;
   font-size: 1.25rem;
 }
+
 h4,
 h5,
 h6 {
@@ -157,6 +149,7 @@ dl {
 dt {
   font-weight: bold;
 }
+
 dd {
   margin-bottom: 0.5rem;
 }
@@ -166,9 +159,11 @@ a {
   color: var(--link-color);
   text-decoration: none;
 }
+
 a strong {
   color: inherit;
 }
+
 a:hover,
 a:focus {
   text-decoration: underline;
@@ -179,6 +174,7 @@ code,
 pre {
   font-family: "Iosevka Mono", monospace;
 }
+
 code {
   padding: 0.25em 0.5em;
   font-size: 85%;
@@ -186,6 +182,7 @@ code {
   background-color: var(--code-bg);
   border-radius: 3px;
 }
+
 pre {
   display: block;
   margin-top: 0;
@@ -200,6 +197,7 @@ pre {
   background-color: var(--code-bg);
   border-radius: 3px;
 }
+
 pre code {
   padding: 0;
   font-size: 100%;
@@ -214,9 +212,11 @@ blockquote {
   color: var(--accent-color);
   border-left: 0.25rem solid var(--border-color);
 }
+
 blockquote p:last-child {
   margin-bottom: 0;
 }
+
 @media (min-width: 30em) {
   blockquote {
     padding-right: 5rem;
@@ -239,11 +239,13 @@ table {
   border: 1px solid var(--border-color);
   border-collapse: collapse;
 }
+
 td,
 th {
   padding: 0.25rem 0.5rem;
   border: 1px solid var(--border-color);
 }
+
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: var(--code-bg);
@@ -279,6 +281,7 @@ tbody tr:nth-child(odd) th {
   color: rgba(255, 255, 255, 0.5);
   background-color: var(--sidebar-bg);
 }
+
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
@@ -307,14 +310,17 @@ tbody tr:nth-child(odd) th {
 .sidebar-nav {
   margin-bottom: 1rem;
 }
+
 .sidebar-nav-item {
   display: block;
   line-height: 1.75;
 }
+
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
 }
+
 .sidebar-nav-item.active {
   font-weight: bold;
 }
@@ -356,6 +362,7 @@ a.sidebar-nav-item:focus {
     left: auto;
     right: 0;
   }
+
   .layout-reverse .content {
     margin-left: 2rem;
     margin-right: 20rem;
@@ -384,6 +391,7 @@ a.sidebar-nav-item:focus {
   padding: 1rem;
   border: 1px solid var(--border-color);
 }
+
 .pagination-item:first-child {
   margin-bottom: -1px;
 }
@@ -396,15 +404,18 @@ a.pagination-item:hover {
   .pagination {
     margin: 3rem 0;
   }
+
   .pagination-item {
     float: left;
     width: 50%;
   }
+
   .pagination-item:first-child {
     margin-bottom: 0;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
   }
+
   .pagination-item:last-child {
     margin-left: -1px;
     border-top-right-radius: 4px;
