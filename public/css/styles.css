@@ -55,6 +55,18 @@ html {
   font-family: "Iosevka", serif
 }
 
+@media (min-width: 48em) {
+  html {
+      font-size: 16px;
+  }
+}
+
+@media (min-width: 58em) {
+  html {
+      font-size: 20px;
+  }
+}
+
 code,
 pre,
 .meta,
@@ -74,14 +86,8 @@ h6 {
   text-rendering: geometricPrecision
 }
 
-@media(min-width:58em) {
-  html {
-    font-size: 20px
-  }
-}
-
 html {
-  color: #f1faee;
+  color: #ffffff;
   background-color: #264653
 }
 
@@ -95,22 +101,6 @@ body {
 ::selection {
   background-color: #468096
 }
-
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  transform: skewY(-2deg) translate(-1rem, 0rem);
-  transform-origin: top;
-  font-style: italic;
-  text-decoration-line: underline;
-  text-decoration-color: goldenrod;
-  text-underline-offset: 4%;
-  text-decoration-thickness: .25ex
-}
- */
 
 h1 {
   font-size: 2rem;
@@ -193,7 +183,7 @@ p {
 }
 
 strong {
-  color: #ddd
+  color: #e3e3e3
 }
 
 ul,
@@ -228,7 +218,7 @@ img {
 code {
   padding: .125em .25em;
   font-size: 74%;
-  color: #f1faee;
+  color: #fbfff9;
   background-color: #264653;
   border-radius: 3px
 }
@@ -272,7 +262,7 @@ pre code {
 blockquote {
   padding: 0.5rem 1rem;
   margin: 0.8rem 0;
-  color: #f1faee;
+  color: #fafff9;
   background-color: #264653;
   padding-right: 2rem;
   border-left: 0.25rem solid #d2d9d0;
@@ -328,7 +318,6 @@ tbody tr:nth-child(odd) th {
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
-  color: #c7cec5
 }
 
 .container {
@@ -341,7 +330,7 @@ tbody tr:nth-child(odd) th {
 
 .sidebar {
   text-align: center;
-  color: #f1faee;
+  color: white;
   background-color: #248a7e
 }
 
@@ -368,7 +357,7 @@ tbody tr:nth-child(odd) th {
 }
 
 .sidebar a {
-  color: #ccd2cb;
+  color: white;
 }
 
 .sidebar a:hover {
@@ -403,14 +392,29 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 48em) {
   .sidebar-sticky {
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+      left: 1rem;
   }
 }
 
 .content {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+@media (min-width: 48em) {
+  .content {
+      max-width: 38rem;
+      margin-left: 20rem;
+      margin-right: 2rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .content {
+      margin-left: 22rem;
+      margin-right: 4rem;
+  }
 }
