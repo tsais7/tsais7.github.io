@@ -1,0 +1,64 @@
+
+<div id="outline-container-org1b04e22" class="outline-2">
+<h2 id="org1b04e22"><span class="section-number-2">1.</span> Org Mode</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+I&rsquo;ve been using GNU Emacs for about 3 years now, and I&rsquo;ve heard a lot about <a href="https://orgmode.org/"><b>Org Mode</b></a>. I just never found a compelling reason to use it, I am not a writer or a super scheduled person. But I&rsquo;ve always wanted a blog, and what better way to do it other than using org-mode?
+</p>
+
+<p>
+Org has been regarded as one of the best writing system for structuring documents and organizing workflows, so much so that app developers have to create multiple different apps just to mimic its powers. Everthing is in <i>plain text</i>, uses the superior markup language (.org), and everthing is open source (thank you rms). People have gotten into GNU Emacs just for Org itself and how powerful GNU Emacs is as a text editing software.
+</p>
+
+<div id="org5e5772d" class="figure">
+<p><img src="https://imgs.xkcd.com/comics/real_programmers.png" alt="real_programmers.png" align="center" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org464f8c7" class="outline-3">
+<h3 id="org464f8c7"><span class="section-number-3">1.1.</span> Literate Programming</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+<a href="https://orgmode.org/worg/org-contrib/babel/intro.html#literate-programming">Literate Programming</a>, in essence is writing documentation intertwined with code, similar to Jupyter notebooks. I first came across the concept from Protesilaos Stavrou&rsquo;s channel, <a href="https://www.youtube.com/watch?v=ycyxytk1NAQ">Emacs: advanced Org literate configuration</a> (HIGHLY recommended channel).
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org8242e49" class="outline-3">
+<h3 id="org8242e49"><span class="section-number-3">1.2.</span> C++ Concurrency in Action - Using <b>RAII</b> to manage threads</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Why? Exceptions can occur before the thread gets joined, this can be solved with a try/catch block. But RAII is idiomatic and handles all possible exit path with a simple wrapper class.
+</p>
+<div class="org-src-container">
+<pre class="src src-C++">class thread_guard {
+    std::thread&amp; t;
+public:
+    explicit thread_guard(std::thread &amp;t_):
+        t(t_); { }
+    ~thread_guard() {
+        if (t.joinable())
+            t.join();
+    }
+    thread_guard(thread_guard const&amp;)=delete;
+    thread_guard &amp;operator=(thread_guard const&amp;)=delete;
+};
+
+void f() {
+    int some_local_state = 0;
+    void my_func(some_local_state);
+    std::thread t(my_func);
+    thread_guard g(t);
+    do_something_in_curr_thread();
+}
+</pre>
+</div>
+
+<p>
+This is just a lil proof of concept. Hopefully in the future I will write more long form posts about topics I find interesting. (and learn how to get syntax highlighting). I&rsquo;d also like to get rid of jekyll completely and write my own pure html website from scratch IF I find the time for it (css scares me).
+</p>
+</div>
+</div>
+</div>
