@@ -86,8 +86,8 @@ h6 {
 }
 
 html {
-  color: #ffffff;
-  background-color: #264653
+  color: #e5cca5;
+  background-color: #33423b
 }
 
 body {
@@ -329,8 +329,8 @@ tbody tr:nth-child(odd) th {
 
 .sidebar {
   text-align: center;
-  color: white;
-  background-color: #248a7e
+  color: #D6BD98;
+  background-color: #4b5a4c
 }
 
 @media (min-width: 48em) {
@@ -356,7 +356,7 @@ tbody tr:nth-child(odd) th {
 }
 
 .sidebar a {
-  color: white;
+  color: #D6BD98;
 }
 
 .sidebar a:hover {
